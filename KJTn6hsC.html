@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('images_11.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: 'Hachi Maru Pop', cursive;
+      min-height: 100vh;
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+      max-width: 500px;
+      margin: 100px auto;
+    }
+
+    .welcome-image {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .welcome-text {
+      font-family: 'Delicious Handrawn', cursive;
+      font-size: 60px;
+      color: #4169e1;
+      opacity: 0;
+      animation: fadeIn 3s ease-out forwards;
+      animation-delay: 0.5s;
+      margin: 0;
+    }
+
+    .name-message {
+      font-family: 'Hachi Maru Pop', cursive;
+      font-size: 36px;
+      color: #4d4d4d;
+      opacity: 0;
+      animation: fadeIn 3s ease-out forwards;
+      animation-delay: 1s;
+      margin: 0;
+    }
+
+    .sub-message {
+      font-family: 'Hachi Maru Pop', cursive;
+      font-size: 28px;
+      color: #ff99cc;
+      opacity: 0;
+      animation: fadeIn 5s ease-out forwards;
+      animation-delay: 1.5s;
+      margin: 0;
+    }
+
+
+    .bottom-message {
+      font-size: 22px;
+      color: #333;
+      text-align: center;
+      padding: 80px 20px;
+      line-height: 1.8;
+      background: rgba(255, 255, 255, 0.8);
+      font-family: 'Hachi Maru Pop', cursive;
+    }
+
+    .extra-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      gap: 40px;
+    }
+
+    .dress-image {
+      width: 80%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .sikisi-image {
+      width: 80%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .extra-text {
+      font-size: 24px;
+      color: #444;
+      text-align: center;
+      font-family: 'Hachi Maru Pop', cursive;
+      line-height: 1.6;
+    }
+
+    .takayuki-text {
+      font-size: 24px;
+      color: #205bff;
+      text-align: center;
+      font-family: 'Hachi Maru Pop', cursive;
+      line-height: 1.6;
+    }
+    @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  visibility: hidden; /* ←追加 */
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible; /* ←追加 */
+}
+.takayuki-image {
+  width: 150px;           /* 幅を固定 */
+  height: 150px;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 50%;
+  margin-top: 30px;
+  transform: translateX(-10px);
+  flex-shrink: 0;         /* 画像の縮小を防ぐ */
+  max-width: 70vw;        /* スマホでも最大幅を調整 */
+}
+.rika-image {
+  width: 150px;           /* 幅を固定 */
+  height: 150px;
+  object-fit: cover;
+  object-position: 40% 70%;
+  border-radius: 50%;
+  margin-top: 30px;
+  transform: translateX(-10px) ;  /* ←ここを追加・変更 */
+  flex-shrink: 0;         /* 画像の縮小を防ぐ */
+  max-width: 70vw;        /* スマホでも最大幅を調整 */
+}
+.image-text-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 90%;
+  margin: 40px auto;
+  flex-wrap: nowrap;      /* 改行禁止 */
+  flex-direction: row; /* デフォルトは横並び */
+}
+.groom-section {
+  margin-top: 50vh; /* 画面の1.2倍分下にずらす */
+}
+.rika-text-block {
+  color: #fa52c7;
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 18px;
+  line-height: 1.6;
+  flex-grow: 1;           /* 残り幅を全部使う */
+  min-width: 0;           /* はみ出し防止 */
+  word-wrap: break-word;  /* 単語の途中でも改行させる */
+  /* 必要に応じて以下を追加して単語の改行を助ける */
+  overflow-wrap: break-word;
+  word-break: break-word;
+  text-align: left; /* スマホでの左寄せ */
+}
+.takayuki-text-block {
+  color: #3c66f1;
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 18px;
+  line-height: 1.6;
+  flex-grow: 1;           /* 残り幅を全部使う */
+  min-width: 0;           /* はみ出し防止 */
+  word-wrap: break-word;  /* 単語の途中でも改行させる */
+  /* 必要に応じて以下を追加して単語の改行を助ける */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+/* PC向け */
+@media (min-width: 801px) {
+  .image-text-wrapper {
+    flex-direction: column;  /* 縦並び */
+    align-items: center;     /* 中央寄せ */
+  }
+  .rika-text-block {
+    text-align: center;      /* テキストも中央寄せ */
+    max-width: 700px;        /* 幅を広げるなど調整 */
+    margin-bottom: 20px;     /* 下に余白（画像と離すため） */
+  }
+  .rika-image {
+    transform: translateX(0); /* 左ずれ解除 */
+    margin-top: 0;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="center-content">
+    <img src="PXL_20250227_082235563.jpg" alt="写真" class="welcome-image">
+    <h1 class="welcome-text">welcome!</h1>
+    <p class="name-message">青木 謙次 様</p>
+  </div>
+
+
+<!-- 新婦ブロック -->
+<div class="image-text-wrapper fade-in-section groom-section">
+  <div class="rika-text-block">
+    本日はお越しいただきありがとうございます！<br>とってもフレンドリーな環境で毎日楽しいです♪<br>利活用チームで本当に良かった！<br>今日はぜひ楽しんでください<br>主賓挨拶楽しみにしてます😊
+  </div>
+  <img src="りかっち.jpg" alt="新婦" class="rika-image">
+</div>
+
+<!-- ドレスクイズ -->
+<div class="extra-section fade-in-section">
+  <img src="ドレス.jpg" alt="ドレスクイズ画像" class="dress-image">
+  <p class="extra-text">披露宴での新婦のドレス色当てクイズ！<br>
+    この色だ！と思う色の箱にカードを切り取って<br>
+    投票箱に入れてください♪</p>
+</div>
+
+<!-- 色紙メッセージ -->
+<div class="extra-section fade-in-section">
+  <img src="色紙.jpg" alt="メッセージお願い画像" class="sikisi-image">
+  <p class="extra-text">
+    結婚式の思い出に<br>
+    良ければメッセージも書いてくださるとうれしいです！
+  </p>
+</div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll(".fade-in-section");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target); // 一度だけアニメーションする
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      fadeElements.forEach(el => observer.observe(el));
+    });
+  </script>
+  </body>
+</html>
