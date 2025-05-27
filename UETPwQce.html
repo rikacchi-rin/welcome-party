@@ -90,6 +90,7 @@
       max-width: 400px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      filter: brightness(95%); /* ← 明るさを70%に落とす */
     }
 
     .sikisi-image {
@@ -105,7 +106,13 @@
       font-family: 'Hachi Maru Pop', cursive;
       line-height: 1.6;
     }
-
+    .line-text {
+      font-size: 18px;
+      color: #129c0d;
+      text-align: center;
+      font-family: 'Hachi Maru Pop', cursive;
+      line-height: 1.6;
+    }
     .takayuki-text {
       font-size: 24px;
       color: #205bff;
@@ -217,21 +224,25 @@
     <h1 class="welcome-text">welcome!</h1>
     <p class="name-message">村上 浩三 様</p>
   </div>
-<!-- 新郎ブロック -->
-<div class="image-text-wrapper fade-in-section groom-section">
-  <img src="くま.jpg" alt="新郎" class="takayuki-image">
-  <div class="takayuki-text-block">
-    今日はいよいよ結婚式です<br>まだ家庭をもつ実感はあまりないけど、これからは家庭を守れる存在になっていくね<br>これからも健康第一で仕事を頑張ってください
-  </div>
-</div>
 
-<!-- 新婦ブロック -->
-<div class="image-text-wrapper fade-in-section">
-  <div class="rika-text-block">
-    いつもいろんな場所に連れて行ってもらったり<br>おうちにお邪魔したりしてお世話になっております<br>とても楽しい家族でフレンドリーに接していただき<br>本当に感謝しています！<br>今日はお忙しいかもしれませんが少しでも楽しんでいただければと思います
-  </div>
-  <img src="りかっち.jpg" alt="新婦" class="rika-image">
-</div>
+
+            <!-- 新郎ブロック -->
+            <div class="image-text-wrapper fade-in-section groom-section">
+              <img src="くま.jpg" alt="新郎" class="takayuki-image">
+              <div class="takayuki-text-block">
+                今日はいよいよ結婚式です<br>まだ家庭をもつ実感はあまりないけど、これからは家庭を守れる存在になっていくね<br>これからも健康第一で仕事を頑張ってください
+              </div>
+            </div>
+            
+
+            <!-- 新婦ブロック -->
+            <div class="image-text-wrapper fade-in-section">
+              <div class="rika-text-block">
+                いつもいろんな場所に連れて行ってもらったり<br>おうちにお邪魔したりしてお世話になっております<br>とても楽しい家族でフレンドリーに接していただき<br>本当に感謝しています！<br>今日はお忙しいかもしれませんが少しでも楽しんでいただければと思います
+              </div>
+              <img src="りかっち.jpg" alt="新婦" class="rika-image">
+            </div>
+            
 
 <!-- ドレスクイズ -->
 <div class="extra-section fade-in-section">
@@ -256,8 +267,8 @@
     新郎新婦にも共有してくださるとうれしいです！<br>
     お手数ですが<br>よろしくお願いします♪
   </p>
-  <p class="extra-text">
-    ☆共有方法☆<br>たかゆきとの<br>LINEのチャットか<br>グループのアルバムで<br>お願いします♪
+  <p class="line-text">
+    ☆共有方法☆<br>        たかゆきとのLINEのチャットか<br>        グループのアルバムでお願いします♪
   </p>
     
 </div>
